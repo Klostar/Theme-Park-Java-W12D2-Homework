@@ -32,4 +32,9 @@ public class CandyFlossStallTest {
         assertEquals(4, candyFlossStall.getParkingSpaces());
     }
 
+    @Test
+    public void hasPrice(){
+        assertEquals(4.20, candyFlossStall.defaultPrice(),1);
+    }
+
 }

@@ -1,6 +1,8 @@
 package ThemePark.Stall;
 
-public abstract class Stall {
+import ThemePark.ITicketed;
+
+public abstract class Stall implements ITicketed {
     private String name;
     private String ownerName;
     private int parkingSpaces;
@@ -22,4 +24,6 @@ public abstract class Stall {
     public int getParkingSpaces(){
         return this.parkingSpaces;
     }
+
+
 }
