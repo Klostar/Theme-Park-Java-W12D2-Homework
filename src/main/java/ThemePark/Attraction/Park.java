@@ -6,4 +6,6 @@ public class Park extends Attraction{
         super(name,rating);
     }
 
+
+
 }

@@ -19,4 +19,10 @@ public class ParkTest {
     public void getParkName(){
         assertEquals("The Kings Trail Park", park.getName());
     }
+
+    @Test
+    public void hasRating(){
+        assertEquals(1, park.getRating());
+    }
 }
+
