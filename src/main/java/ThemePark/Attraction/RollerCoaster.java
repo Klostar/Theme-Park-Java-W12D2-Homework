@@ -4,7 +4,7 @@ import ThemePark.ISecurity;
 import ThemePark.ITicketed;
 import ThemePark.Visitor;
 
-public class RollerCoaster extends Attraction implements ISecurity {
+public class RollerCoaster extends Attraction implements ISecurity,ITicketed {
 
     public RollerCoaster(String name){
         super(name);
@@ -17,4 +17,14 @@ public class RollerCoaster extends Attraction implements ISecurity {
         else return false;
     }
 
+    public double defaultPrice(){
+        return 8.40;
+    }
+
+    public double priceFor(Visitor visitor){
+        if(visitor.getHeight() > 200){
+           return defaultPrice() * 2;
+        }
+        else return defaultPrice();
+    }
 }
