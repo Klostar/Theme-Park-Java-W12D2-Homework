@@ -1,3 +1,5 @@
+package ThemePark;
+
 public class Visitor {
     private int heightCm;
     private int age;
