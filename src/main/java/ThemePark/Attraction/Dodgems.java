@@ -1,12 +1,14 @@
 package ThemePark.Attraction;
 
+import ThemePark.IReviewed;
 import ThemePark.ITicketed;
 import ThemePark.Visitor;
 
-public class Dodgems extends Attraction implements ITicketed {
+public class Dodgems extends Attraction implements ITicketed, IReviewed {
 
-    public Dodgems(String name){
-        super(name);
+    public Dodgems(String name,int rating){
+        super(name,rating);
+
     }
 
     @Override
@@ -21,4 +23,9 @@ public class Dodgems extends Attraction implements ITicketed {
         }
         else return defaultPrice();
     }
+
+    public int getRating(){
+        return 2;
+    }
+
 }

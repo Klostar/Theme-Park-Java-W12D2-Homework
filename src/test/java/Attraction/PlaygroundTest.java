@@ -13,7 +13,7 @@ public class PlaygroundTest  {
 
     @Before
     public void before(){
-        playground = new Playground("Jungle Theme Playground");
+        playground = new Playground("Jungle Theme Playground",2);
         visitor = new Visitor(145,13,50.0);
     }
 

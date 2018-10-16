@@ -6,8 +6,8 @@ import ThemePark.Visitor;
 
 public class RollerCoaster extends Attraction implements ISecurity,ITicketed {
 
-    public RollerCoaster(String name){
-        super(name);
+    public RollerCoaster(String name, int rating){
+        super(name,rating);
     }
 
     public boolean isAllowed(Visitor visitor){
