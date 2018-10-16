@@ -1,6 +1,7 @@
 package Attraction;
 
 import ThemePark.Attraction.Dodgems;
+import ThemePark.Visitor;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,5 +19,15 @@ public class DodgemsTest {
     @Test
     public void getDodgemsName(){
         assertEquals("Bumper Cars", dodgems.getName());
+    }
+
+    @Test
+    public void hasprice(){
+        assertEquals(4.50, dodgems.defaultPrice(),1);
+    }
+    @Test
+    public void halfPrice(){
+        Visitor visitor = new Visitor(200,10,20.0);
+        assertEquals(2.25, dodgems.priceFor(visitor),1);
     }
 }
