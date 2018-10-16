@@ -35,4 +35,9 @@ public class TobaccoStallTest {
         Visitor visitor = new Visitor(200 ,16,20.0);
         assertEquals(false , tobaccoStall.isAllowed(visitor));
     }
+    @Test
+    public void testVisitorAllowed(){
+        Visitor visitor = new Visitor(200,20,20.0);
+        assertEquals(true, tobaccoStall.isAllowed(visitor));
+    }
 }
