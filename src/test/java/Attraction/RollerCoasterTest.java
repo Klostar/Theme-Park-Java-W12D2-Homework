@@ -30,5 +30,9 @@ public class RollerCoasterTest {
         assertEquals(true, rollerCoaster.isAllowed(visitor));
         Visitor visitor2 = new Visitor(140,13,20.0);
         assertEquals(false, rollerCoaster.isAllowed(visitor2));
+        Visitor visitor3 = new Visitor(140,10,20.0);
+        assertEquals(false , rollerCoaster.isAllowed(visitor3));
+        Visitor visitor4 = new Visitor(146,10,20.0);
+        assertEquals(false, rollerCoaster.isAllowed(visitor4));
     }
 }
