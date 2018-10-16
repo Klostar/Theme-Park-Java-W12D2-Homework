@@ -1,9 +1,11 @@
+import ThemePark.Attraction.Attraction;
 import ThemePark.Attraction.RollerCoaster;
 import ThemePark.Stall.CandyFlossStall;
 import ThemePark.ThemePark;
 import ThemePark.Visitor;
 import org.junit.Before;
 import org.junit.Test;
+
 
 
 import static org.junit.Assert.assertEquals;
@@ -13,6 +15,7 @@ public class ThemeParkTest {
     CandyFlossStall candyFlossStall;
     RollerCoaster rollerCoaster;
     Visitor visitor;
+
 
 
     @Before
@@ -29,7 +32,7 @@ public class ThemeParkTest {
     }
 
     @Test
-    public void getNumberofAttractions(){
+    public void getNumberOfAttractions(){
         assertEquals(0, themePark.getAttractions());
     }
 
@@ -54,6 +57,12 @@ public class ThemeParkTest {
     public void addVisit(){
         assertEquals("ThemePark.Visitor Visited :Hulk Smash", themePark.visit(visitor,rollerCoaster));
 
+    }
+
+
+    @Test
+    public void reviewListStartsEmpty(){
+        assertEquals(0, themePark.reviewsCount());
     }
 
 

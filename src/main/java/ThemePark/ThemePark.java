@@ -11,6 +11,8 @@ public class ThemePark {
     private ArrayList<Attraction>attractions;
     private ArrayList<Stall>stalls;
     private String name;
+//    private ArrayList<ITicketed>allowed;
+    private ArrayList<IReviewed> reviews;
 
 
 
@@ -18,6 +20,8 @@ public class ThemePark {
         this.name = name;
         this.attractions = new ArrayList<>();
         this.stalls = new ArrayList<>();
+//        this.allowed = new ArrayList<>();
+        this.reviews = new ArrayList<>();
 
 
 
@@ -47,4 +51,10 @@ public class ThemePark {
     public String visit(Visitor visitor, Attraction attraction) {
         return "ThemePark.Visitor Visited :" + attraction.getName();
     }
+
+
+    public int reviewsCount() {
+        return reviews.size();
+    }
 }
+
