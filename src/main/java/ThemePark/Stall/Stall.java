@@ -1,4 +1,4 @@
-package ThemePark.Stalls;
+package ThemePark.Stall;
 
 public abstract class Stall {
     private String name;
@@ -11,5 +11,15 @@ public abstract class Stall {
         this.parkingSpaces = parkingSpaces;
     }
 
+    public String getName(){
+        return this.name;
+    }
 
+    public String getOwnerName(){
+        return this.ownerName;
+    }
+
+    public int getParkingSpaces(){
+        return this.parkingSpaces;
+    }
 }

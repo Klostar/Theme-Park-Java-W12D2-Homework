@@ -1,3 +1,5 @@
+package Attraction;
+
 import ThemePark.Attraction.RollerCoaster;
 import org.junit.Before;
 import org.junit.Test;

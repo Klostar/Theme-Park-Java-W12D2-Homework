@@ -1,3 +1,5 @@
+package Attraction;
+
 import ThemePark.Attraction.Dodgems;
 import org.junit.Before;
 import org.junit.Test;
