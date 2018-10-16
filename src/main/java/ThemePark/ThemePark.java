@@ -2,6 +2,7 @@ package ThemePark;
 
 import ThemePark.Attraction.Attraction;
 import ThemePark.Stall.Stall;
+import ThemePark.Stall.Stall;
 
 
 
@@ -31,5 +32,13 @@ public class ThemePark {
 
     public void addAttraction(Attraction attraction) {
         attractions.add(attraction);
+    }
+
+    public int getStalls() {
+        return stalls.size();
+    }
+
+    public void addStall(Stall stall) {
+        stalls.add(stall);
     }
 }

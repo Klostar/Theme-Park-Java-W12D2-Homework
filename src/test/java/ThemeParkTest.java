@@ -35,4 +35,15 @@ public class ThemeParkTest {
         themePark.addAttraction(rollerCoaster);
         assertEquals(1, themePark.getAttractions());
     }
+
+    @Test
+    public void getNumberOfStalls(){
+        assertEquals(0, themePark.getStalls());
+    }
+
+    @Test
+    public void addStallToThemePark(){
+        themePark.addStall(candyFlossStall);
+        assertEquals(1, themePark.getStalls());
+    }
 }
