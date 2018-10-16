@@ -46,4 +46,9 @@ public class RollerCoasterTest {
         Visitor visitor = new Visitor(201, 20,30.0);
         assertEquals(16.80, rollerCoaster.priceFor(visitor),1);
     }
+
+    @Test
+    public void getRating(){
+        assertEquals(5, rollerCoaster.getRating());
+    }
 }
