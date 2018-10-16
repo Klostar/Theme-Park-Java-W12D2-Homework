@@ -46,4 +46,8 @@ public class TobaccoStallTest {
         assertEquals(6.60, tobaccoStall.defaultPrice(),1);
     }
 
+    @Test
+    public void getRating(){
+        assertEquals(1, tobaccoStall.getRating());
+    }
 }

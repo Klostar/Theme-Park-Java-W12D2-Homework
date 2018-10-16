@@ -34,4 +34,8 @@ public class IceCreamStallTest {
         assertEquals(4.20, iceCreamStall.defaultPrice(),1);
     }
 
+    @Test
+    public void getRating(){
+        assertEquals(5, iceCreamStall.getRating());
+    }
 }
