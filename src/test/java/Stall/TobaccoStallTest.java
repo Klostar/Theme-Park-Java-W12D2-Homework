@@ -40,4 +40,10 @@ public class TobaccoStallTest {
         Visitor visitor = new Visitor(200,20,20.0);
         assertEquals(true, tobaccoStall.isAllowed(visitor));
     }
+
+    @Test
+    public void hasPrice(){
+        assertEquals(6.60, tobaccoStall.defaultPrice(),1);
+    }
+
 }
