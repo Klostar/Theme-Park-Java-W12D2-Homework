@@ -13,7 +13,7 @@ public class CandyFlossStallTest {
 
     @Before
     public void before(){
-        candyFlossStall = new CandyFlossStall("Cotton Candy Clouds", "Fluffy Joe", 4);
+        candyFlossStall = new CandyFlossStall("Cotton Candy Clouds", "Fluffy Joe", 4, 3);
 
     }
 
@@ -37,4 +37,8 @@ public class CandyFlossStallTest {
         assertEquals(4.20, candyFlossStall.defaultPrice(),1);
     }
 
+    @Test
+    public void getRating(){
+        assertEquals(3, candyFlossStall.getRating());
+    }
 }

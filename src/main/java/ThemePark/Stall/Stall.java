@@ -1,16 +1,19 @@
 package ThemePark.Stall;
 
+import ThemePark.IReviewed;
 import ThemePark.ITicketed;
 
-public abstract class Stall implements ITicketed {
+public abstract class Stall implements ITicketed, IReviewed {
     private String name;
     private String ownerName;
     private int parkingSpaces;
+    private int rating;
 
-    public Stall(String name, String ownerName, int parkingSpaces){
+    public Stall(String name, String ownerName, int parkingSpaces, int rating){
         this.name = name;
         this.ownerName = ownerName;
         this.parkingSpaces = parkingSpaces;
+        this.rating = rating;
     }
 
     public String getName(){
@@ -25,5 +28,8 @@ public abstract class Stall implements ITicketed {
         return this.parkingSpaces;
     }
 
+    public int getRating(){
+        return this.rating;
+    }
 
 }

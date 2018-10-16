@@ -4,8 +4,8 @@ import ThemePark.Visitor;
 
 public class CandyFlossStall extends Stall {
 
-    public CandyFlossStall(String name, String ownerName,int parkingSpaces){
-        super(name,ownerName,parkingSpaces);
+    public CandyFlossStall(String name, String ownerName,int parkingSpaces, int rating){
+        super(name,ownerName,parkingSpaces,rating);
 
     }
 
@@ -18,4 +18,7 @@ public class CandyFlossStall extends Stall {
     public double priceFor(Visitor visitor) {
         return defaultPrice();
     }
+
+
+
 }

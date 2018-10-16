@@ -12,7 +12,7 @@ public class TobaccoStallTest {
 
     @Before
     public void before(){
-        tobaccoStall = new TobaccoStall("Tobys Tobacco", "Smokey Toby", 2);
+        tobaccoStall = new TobaccoStall("Tobys Tobacco", "Smokey Toby", 2,1);
     }
 
     @Test

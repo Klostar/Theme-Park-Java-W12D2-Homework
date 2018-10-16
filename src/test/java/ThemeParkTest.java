@@ -18,7 +18,7 @@ public class ThemeParkTest {
     @Before
     public void before(){
         themePark = new ThemePark("Thorpe Park");
-        candyFlossStall = new CandyFlossStall("Chloes Cotton Candy", "Chloe Cotton", 3);
+        candyFlossStall = new CandyFlossStall("Chloes Cotton Candy", "Chloe Cotton", 3,5);
         rollerCoaster = new RollerCoaster("Hulk Smash",5);
 
     }
