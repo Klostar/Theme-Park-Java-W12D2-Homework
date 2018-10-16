@@ -1,5 +1,5 @@
 package ThemePark;
 
 public interface ISecurity {
-    boolean isAllowedyo(Visitor visitor);
+    boolean isAllowed(Visitor visitor);
 }
