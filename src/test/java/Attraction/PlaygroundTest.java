@@ -27,4 +27,10 @@ public class PlaygroundTest  {
         assertEquals(true , playground.isAllowed(visitor));
     }
 
+    @Test
+    public void rejectAge(){
+        Visitor visitor2 = new Visitor(200,20,40.0);
+        assertEquals(false, playground.isAllowed(visitor2));
+    }
+
 }
