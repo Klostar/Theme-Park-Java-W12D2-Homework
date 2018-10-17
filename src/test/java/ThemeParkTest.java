@@ -1,12 +1,16 @@
-import ThemePark.Attraction.Attraction;
+import ThemePark.Attraction.Dodgems;
+import ThemePark.Attraction.Playground;
 import ThemePark.Attraction.RollerCoaster;
 import ThemePark.Stall.CandyFlossStall;
+import ThemePark.Stall.TobaccoStall;
 import ThemePark.ThemePark;
 import ThemePark.Visitor;
+import ThemePark.IReviewed;
 import org.junit.Before;
 import org.junit.Test;
 
 
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
@@ -14,16 +18,35 @@ public class ThemeParkTest {
     ThemePark themePark;
     CandyFlossStall candyFlossStall;
     RollerCoaster rollerCoaster;
+    Dodgems dodgems;
     Visitor visitor;
+    TobaccoStall tobaccoStall;
+    Playground playground;
 
 
 
     @Before
     public void before(){
-        themePark = new ThemePark("Thorpe Park");
         candyFlossStall = new CandyFlossStall("Chloes Cotton Candy", "Chloe Cotton", 3,5);
         rollerCoaster = new RollerCoaster("Hulk Smash",5);
+        dodgems = new Dodgems("Bumper Cars", 2);
+        tobaccoStall = new TobaccoStall("Smokeys", "SmokeyJoe", 4, 5);
+        playground = new Playground("Dinosaur Playground", 4);
 
+
+        ArrayList<IReviewed> reviews = new ArrayList<>();
+
+        reviews.add(dodgems);
+        reviews.add(tobaccoStall);
+
+        themePark = new ThemePark("Thorpe Park", reviews);
+
+
+    }
+
+    @Test
+    public void testGetAllReviewed() {
+        assertEquals(2, themePark.getAllRevieweds().size());
     }
 
     @Test
@@ -59,11 +82,11 @@ public class ThemeParkTest {
 
     }
 
-
-    @Test
-    public void reviewListStartsEmpty(){
-        assertEquals(0, themePark.reviewsCount());
-    }
+//    @Test
+//    public void reviewListStartsEmpty(){
+//        assertEquals(0, themePark.reviewsCount());
+//    }
+//
 
 
 }

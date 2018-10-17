@@ -5,27 +5,26 @@ import ThemePark.Stall.Stall;
 
 
 
+
 import java.util.ArrayList;
 
 public class ThemePark {
-    private ArrayList<Attraction>attractions;
-    private ArrayList<Stall>stalls;
+    private ArrayList<Attraction> attractions;
+    private ArrayList<Stall> stalls;
     private String name;
-//    private ArrayList<ITicketed>allowed;
+    //    private ArrayList<ITicketed>allowed;
     private ArrayList<IReviewed> reviews;
 
 
-
-    public ThemePark(String name){
+    public ThemePark(String name, ArrayList<IReviewed> reviews)  {
         this.name = name;
         this.attractions = new ArrayList<>();
         this.stalls = new ArrayList<>();
-//        this.allowed = new ArrayList<>();
-        this.reviews = new ArrayList<>();
-
-
+//       this.allowed = new ArrayList<>();
+        this.reviews = reviews;
 
     }
+
 
     public String getName() {
         return this.name;
@@ -56,5 +55,10 @@ public class ThemePark {
     public int reviewsCount() {
         return reviews.size();
     }
+
+    public ArrayList<IReviewed> getAllRevieweds() {
+        return reviews;
+    }
+
 }
 
